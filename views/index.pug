@@ -1,0 +1,45 @@
+doctype html
+html
+    include includes/head.pug
+    body
+        ul
+            each val in list
+                li
+                    a(href='/users/'+val)= val
+
+
+
+
+
+
+
+    //shows commented js that is emails and date from server
+
+//html
+//    include includes/head.pug
+//    body
+//        h1 This is a header
+//        include includes/email.pug
+//        include includes/date.pug
+
+
+    //pug file extends a layout using blocks
+
+//extends ./layout/layout.pug
+//block headContent
+//    title= title
+//block bodyContent
+//    h1= message
+//    h2 Soccer is #{partial}
+
+
+    //base pug file
+
+//doctype html
+//html
+//    head
+//        title= title
+//    body
+//        h1(id='myHeader', class='myClass')= message
+//        h1#myHeader.myClass.mySecondClass= message
+//        h2(class='soccer') Soccer #{partial}

@@ -1,0 +1,26 @@
+html
+    head
+        <link rel="stylesheet" href="./styles.css">
+    body
+        table
+            tr
+                th User Id:
+                th Name:
+                th Email:
+                th Age:
+            tr
+            each user in users
+              tr
+                td= user.userId
+                td= user.name
+                td= user.email
+                td= user.age
+                td
+                     a(href="/edit" + user.id) Edit
+                td
+                     a(href="/delete" + user.id) Delete
+
+
+    div
+         a(href='/') Add another user
+

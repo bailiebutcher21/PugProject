@@ -21,12 +21,6 @@ app.get('/', (req, res) => {
 app.get('/userListing', (req, res) => {
     res.render('userListing');
 });
-// app.post("/createUserRoute", (req, res) => {
-//     //Create a use using JSON object
-//     //users.push(user);
-//     //Save that user (push to array)
-//     res.redirect('/userListing');
-// });
 
 app.post('/create', (req,res) => {
     let newUser = {
@@ -40,29 +34,41 @@ app.post('/create', (req,res) => {
     res.render('userListing',{users: allUsers})
 });
 
-app.post('deleteUser', (req,res) => {
+app.get('/editView/:userId', (req, res) => {
+    let userInfo;
     for(let i = 0; i < allUsers.length; i++){
-        if(+req.params.id === allUsers[i].id){
-            allUsers.splice(i, 1);
+        if(req.params.userId === allUsers[i].userId){
+            userInfo = allUsers[i];
+            res.render('/editView', {user: userInfo});
         }
     }
-    res.render('users', {users:allUsers});
 });
 
-app.post('/edit', (req,res) => {
-    let editUser ={
+app.post('/editView', (req, res) => {
+    let userEdit = {
         userId: req.body.userId,
         name: req.body.name,
         email: req.body.email,
-        age: req.body.age
+        age: req.body.age,
+        id: req.body.id
     };
     for(let i = 0; i < allUsers.length; i++){
-        if(req.body.id === allUsers[i].id){
-            allUsers[i] = editUser;
+        if(req.body.userId === allUsers[i].userId){
+            allUsers[i] = userEdit;
         }
     }
-    res.render('editView', {editUser:editUser});
+    res.render('/userListing', {users:allUsers});
+});
 
+
+app.get('/deletePost/:userId', (req,res) => {
+    console.log('delete user');
+    for(let i = 0; i < allUsers.length; i++){
+        if(req.params.userId === allUsers[i].userId){
+            allUsers.splice(i, 1);
+        }
+    }
+    res.render('userListing', {users:allUsers});
 });
 
 app.listen(3000);

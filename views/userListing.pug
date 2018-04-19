@@ -1,6 +1,5 @@
 html
     head
-        <link rel="stylesheet" href="./styles.css">
     body
         table
             tr
@@ -16,9 +15,9 @@ html
                 td= user.email
                 td= user.age
                 td
-                     a(href="/edit" + user.id) Edit
+                     a(href="/edit/" + user.userId) Edit
                 td
-                     a(href="/delete" + user.id) Delete
+                     a(href='/deletePost/' + user.userId) Delete
 
 
     div

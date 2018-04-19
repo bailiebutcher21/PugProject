@@ -2,7 +2,7 @@ html
     head
         title Edit
     body
-        form(method='POST', action='/edit')
+        form(method='POST', action='/editView/')
             div
                 label(for='userId') User ID
                 input(id='userId', name='userId' value= user.userId)
@@ -15,7 +15,5 @@ html
             div
                 label(for='age') Age
                 input(id='age', name='age' value= user.age)
-            div
-                input(id='id', name='id', value= user.id style='display: none')
             div
                 input(type='submit', value='Edit User')

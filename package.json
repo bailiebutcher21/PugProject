@@ -1,7 +1,6 @@
 {
   "name": "project8",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +11,19 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
+    "mongodb": "^3.0.7",
+    "mongoose": "^5.0.15",
     "path": "^0.12.7",
     "pug": "^2.0.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bailiebutcher21/PugProject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bailiebutcher21/PugProject/issues"
+  },
+  "homepage": "https://github.com/bailiebutcher21/PugProject#readme",
+  "description": ""
 }

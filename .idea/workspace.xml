@@ -20,8 +20,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+            <state relative-caret-position="25">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,6 +90,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>edit</find>
+      <find>userData</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,10 +131,10 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="595" />
-    <option name="y" value="23" />
-    <option name="width" value="1443" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-68" />
+    <option name="y" value="27" />
+    <option name="width" value="1440" />
     <option name="height" value="807" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -250,7 +251,8 @@
       <workItem from="1524490345264" duration="1503000" />
       <workItem from="1524579763044" duration="594000" />
       <workItem from="1524754194784" duration="229000" />
-      <workItem from="1525360816666" duration="4244000" />
+      <workItem from="1525360816666" duration="5911000" />
+      <workItem from="1525441413085" duration="1622000" />
     </task>
     <task id="LOCAL-00001" summary="Got Delete Button to work">
       <created>1524153439287</created>
@@ -273,23 +275,30 @@
       <option name="project" value="LOCAL" />
       <updated>1524237507469</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Started Adding Mongodb">
+      <created>1525370220626</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1525370220626</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46875000" />
+    <option name="totallyTimeSpent" value="50164000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1443" height="807" extended-state="6" />
+    <frame x="-68" y="27" width="1440" height="807" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2275281" sideWeight="0.19777602" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2275281" sideWeight="0.802224" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41011235" sideWeight="0.802224" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -331,7 +340,8 @@
     <MESSAGE value="Got Delete Button to work" />
     <MESSAGE value="Final Push" />
     <MESSAGE value="Changed Button Name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Button Name" />
+    <MESSAGE value="Started Adding Mongodb" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started Adding Mongodb" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -659,8 +669,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="25">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>

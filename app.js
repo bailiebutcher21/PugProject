@@ -5,10 +5,6 @@ const path = require('path');
 const MongoClient = require('mongodb').MongoClient;
 const mongoose = require('mongoose');
 
-
-// let url = "mongodb://localhost:27017/mydb";
-// let mongo = require('mongodb');
-// let assert = require('assert');
 const userSchema = mongoose.Schema({
     userid: String,
     name: String,
@@ -18,11 +14,10 @@ const userSchema = mongoose.Schema({
 });
 
 const User = mongoose.model("User", userSchema);
-
-const url = 'mongodb://localhost/27017/myproject';
+const url = 'mongodb://localhost:27017/bailie';
 
 MongoClient.connect(url, function(err, db){
-    if (err) err;
+    if (err) throw err;
     const dbo = db.db('myproject');
 
     dbo.createCollection("users", function (err, res) {
@@ -49,7 +44,7 @@ let user;
 app.use(express.static('public'));
 app.set ('view engine', 'pug');
 app.use(bodyParser.json());
-app.use(bodyParser.url.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({extended:true}));
 
 app.get('/', (req, res) => {
     res.render('CreateUser');
@@ -62,18 +57,6 @@ app.post('/create', (req,res) => {
         email: req.body.email,
         age: req.body.age
     };
-    let id = req.body.id;
-    userData.findById(id, function(err, doc){
-        if (err) {
-            console.error("Error, no entry found");
-        }
-        doc.userId = req.body.userId;
-        doc.name = req.body.name;
-        doc.email = req.body.email;
-        doc.age = req.body.age;
-        doc.save();
-    });
-
     allUsers.push(newUser);
     console.log(allUsers);
     res.render('userListing',{users: allUsers})
@@ -97,7 +80,6 @@ app.post('/editView', (req, res) => {
 });
 
 app.get('/deletePost/:userId', (req,res) => {
-    userData.findByidandRemove(id).exec();
     console.log('delete user');
     for(let i = 0; i < allUsers.length; i++){
         if(req.params.userId === allUsers[i].userId){
@@ -141,10 +123,6 @@ app.get('/users/:userName', (req, res) => {
         });
     res.end(`you clicked on: ${req.params.userName}`)
 });
-
-let data = new userData(item);
-data.save();
-res.redirect('/');
 
 app.get('/userListing', (req, res) => {
     res.render('userListing');
